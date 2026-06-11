@@ -1,36 +1,141 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Student Dashboard
 
-## Getting Started
+A modern Student Dashboard built with **Next.js 16**, **TypeScript**, **Tailwind CSS**, **Supabase**, and **Framer Motion**. The application displays student courses, learning progress, and activity in a clean and responsive dashboard.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+
+* Responsive dashboard UI
+* Course data fetched from Supabase
+* Dynamic course progress
+* Activity heatmap
+* Framer Motion animations
+* Reusable React components
+* Loading state
+* Error handling
+* Responsive layout
+
+---
+
+## Tech Stack
+
+* Next.js 16 (App Router)
+* React
+* TypeScript
+* Tailwind CSS
+* Supabase
+* Framer Motion
+* Lucide React
+
+---
+
+## Architecture
+
+The application follows a component-based architecture.
+
+### Components
+
+* HeroCard
+* Sidebar
+* CourseCard
+* ActivityCard
+* ProgressBar
+* SkeletonCard
+
+Each UI section is separated into reusable components to keep the code clean and maintainable.
+
+---
+
+## Server and Client Component Split
+
+### Server Components
+
+Server Components are used for:
+
+* Fetching course data from Supabase
+* Rendering the main dashboard page
+
+Example:
+
+* `app/page.tsx`
+
+Using a Server Component allows data to be fetched securely before rendering the page.
+
+### Client Components
+
+Client Components are used wherever interactivity or animations are required.
+
+Examples:
+
+* CourseCard
+* HeroCard
+* ActivityCard
+* Sidebar
+
+These components use Framer Motion for hover and entry animations.
+
+---
+
+## Folder Structure
+
+```
+app/
+components/
+lib/
+types/
+public/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env.local` file with:
 
-## Learn More
+```
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
 
-To learn more about Next.js, take a look at the following resources:
+A sample configuration is available in `.env.example`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Installation
 
-## Deploy on Vercel
+```bash
+npm install
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Challenges Faced
+
+During development I faced a few challenges:
+
+* Configuring Supabase API keys correctly
+* Understanding the Server Component and Client Component separation in Next.js App Router
+* Implementing Framer Motion only inside Client Components
+* Creating reusable UI components while keeping the project structure clean
+
+These challenges helped me gain a better understanding of modern Next.js development.
+
+---
+
+## Future Improvements
+
+* User Authentication
+* Course Details Page
+* Real-time Progress Updates
+* Dark/Light Theme Toggle
+* User Profile
+
+---
+## Author
+
+**Sonu Kumar**
+
+Bachelor of Computer Applications (BCA)
+Chandigarh University
